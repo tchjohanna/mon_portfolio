@@ -95,7 +95,7 @@
             </a>
             <a href="https://www.instagram.com/sitewebdurance_fr/" target="blank">
                 <div class="media media3">
-                    <img src="ressources/instagram-2935404.svg" alt="twitter icone" class="icone-medias">
+                    <img src="ressources/instagram.svg" alt="twitter icone" class="icone-medias">
                 </div>
             </a>
         </div>
@@ -179,7 +179,7 @@
             </div>
             <h3>Conception Mobile First et Animations CSS</h3>
             <p>Création d'un site mobile "mobile first" avec animations CSS, mettant en avant des menus de restaurant interactifs.</p>
-            <a href="#" class="btn-projets">Découvrez le projet</a>
+            <a href="https://github.com/tchjohanna/ameliorer-interface-site-mobile-animations-css-oh-my-food.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
 
@@ -189,7 +189,7 @@
             </div>
             <h3>Système d'Authentification avec React et Redux</h3>
             <p>Création d'un Tableau de Bord et Système d'Authentification chez Argent Bank avec React et Redux</p>
-            <a href="#" class="btn-projets">Découvrez le projet</a>
+            <a href="https://github.com/tchjohanna/implementez-le-front-end-d-une-application-bancaire-avec-react.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
 
@@ -199,7 +199,7 @@
             </div>
             <h3>Création Portfolio d'Architecture pour Sophie Bluel avec Filtres et Gestion de Projets</h3>
             <p>Présentation des projets avec filtres catégoriels et interface d'administration pour la gestion des projets.</p>
-            <a href="#" class="btn-projets">Découvrez le projet</a>
+            <a href="https://github.com/tchjohanna/Creez-une-page-web-dynamique-avec-JavaScript.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
 
@@ -209,7 +209,7 @@
             </div>
             <h3>Debug et test du site 724events</h3>
             <p>Correction de la gestion des dates, optimisation du slider, et amélioration des filtres catégoriels, complétés par des tests rigoureux.</p>
-            <a href="#" class="btn-projets">Découvrez le projet</a>
+            <a href="https://github.com/tchjohanna/debuggez-le-site-dune-agence-devenementiel.git" class="btn-projets">Découvrez le projet</a>
         </div>      
 
     </div>
@@ -356,32 +356,28 @@
 <!-- Section Contact -->
 
 <section class="section-contact" id="contact">
-
     <h2><strong>Me</strong> contacter</h2>
-
     <div class="container-form">
-
-        <form class="form-bloc">
-
+        <form class="form-bloc" action="sendemail.php" method="post">
             <div class="form-groupe">
                 <label for="prenom">Prénom</label>
-                <input type="text" required maxlength="16" id="prenom">
+                <input type="text" name="prenom" required maxlength="16" id="prenom">
             </div>
             <div class="form-groupe">
                 <label for="nom">Nom</label>
-                <input type="text" required maxlength="16" id="nom">
+                <input type="text" name="nom" required maxlength="16" id="nom">
             </div>
             <div class="form-groupe">
-                <textarea id="txt" placeholder="Votre message" required></textarea>
+                <textarea id="txt" name="message" placeholder="Votre message" required></textarea>
             </div>
-
             <div class="form-groupe">
                 <input type="submit" value="ENVOYER" class="button-sub">
             </div>
-
         </form>
-
     </div>
+</section>
+
+
 
 
 </section>
