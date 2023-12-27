@@ -192,7 +192,7 @@ body {
 /* ------------------ Accueil ---------------- */
 
 .accueil {
-    background: url(ressources/accueil.jpg);
+    background: url(ressources/accueil.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -207,6 +207,7 @@ h1 {
     font-family: 'Abril Fatface', sans-serif;
     margin: 0 60px;
     padding-top: 210px;
+    
 }
 .texteAnimation {
     font-size: 30px;
@@ -955,7 +956,7 @@ h1 {
 .section-parallax {
     width: 100%;
     height: 250px;
-    background: url(ressources/accueil.jpg) no-repeat right / cover fixed;
+    background: url(ressources/accueil.webp) no-repeat right / cover fixed;
     display: flex;
     justify-content: center;
     align-items: center;

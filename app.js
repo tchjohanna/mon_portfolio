@@ -40,9 +40,9 @@ typewriter
 .pauseFor(1000)
 .typeString('<span style="color: #EA39ff;"> CSS</span>')
 .pauseFor(1000)
-.typeString('<span style="color: midnightblue;"> JAVASCRIPT</span>')
+.typeString('<span style="color: #FFF351;"> JAVASCRIPT</span>')
 .pauseFor(1000)
-.typeString('<span style="color: #ff6910;">REACT</span> !')
+.typeString('<span style="color: #6EE0FF;">REACT</span> !')
 .start()
 
 // Animation Contact
