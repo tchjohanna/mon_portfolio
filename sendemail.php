@@ -4,31 +4,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = strip_tags(trim($_POST["nom"]));
     $message = strip_tags(trim($_POST["message"]));
 
-    // Vérifiez ici si les champs sont remplis (validation)
-    // ...
+    // Vérification si les champs sont remplis (validation)
+    if (empty($prenom) || empty($nom) || empty($message)) {
+        echo "Erreur : Veuillez remplir tous les champs du formulaire.";
+        exit;
+    }
 
-    // Adresse email de destination
-    $to = "contact@sitewebdurance.com";
+    // Adresse e-mail de destination
+    $to = "tchjohanna@gmail.com"; 
 
-    // Sujet de l'email
-    $subject = "Message de $prenom $nom";
+    // Sujet de l'e-mail
+    $subject = "Nouveau message de $prenom $nom";
 
-    // Corps de l'email
+    // Corps de l'e-mail
     $email_content = "Prénom: $prenom\n";
     $email_content .= "Nom: $nom\n\n";
     $email_content .= "Message:\n$message\n";
 
-    // Headers de l'email
+    // En-têtes de l'e-mail
     $email_headers = "From: $prenom $nom";
 
-    // Envoi de l'email
-    mail($to, $subject, $email_content, $email_headers);
-
-    // Redirection vers une page de confirmation
-    header("Location: merci.html");
+    // Envoi de l'e-mail
+    if (mail($to, $subject, $email_content, $email_headers)) {
+        echo "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.";
+    } else {
+        echo "Erreur lors de l'envoi de votre message. Veuillez réessayer plus tard.";
+    }
 } else {
-    // Redirection vers la page du formulaire en cas d'accès direct au script
-    header("Location: contact.html");
-    exit;
+    echo "Accès direct non autorisé.";
 }
 ?>
