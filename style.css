@@ -12,12 +12,11 @@ body {
 }
 
 /*-------------- Navigation --------------*/
-
 .navigationGauche {
     width: 300px;
     height: 100vh;
     min-height: 800px;
-    background: #333;
+    background: #da38fa;
     position: fixed;
     top: 0;
     left: -300px;
@@ -125,7 +124,7 @@ body {
         height: 70px;
         border: 1px solid #f1f1f1;
         border-radius: 50%;
-        background: #333;
+        background: #724bbb;
         position: fixed;
         top: 10px;
         left: 10px;
@@ -192,7 +191,7 @@ body {
 /* ------------------ Accueil ---------------- */
 
 .accueil {
-    background: url(ressources/accueil.webp);
+    background: url(assets/accueil.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -426,7 +425,7 @@ h1 {
 }
 .fond-forme {
     background: #485563;
-    background-image: linear-gradient(to right, #29323c, #485563);
+    background-image: linear-gradient(to right, #bb53c9, #a42fa0);
     width: 2300px;
     height: 1000px;
     position: absolute;
@@ -562,7 +561,6 @@ h1 {
 
 
 }
-
 /* ------------------ Section Portfolio --------------------- */
 
 .portfolio {
@@ -609,7 +607,7 @@ h1 {
 .item h3 {
     padding: 10px 10px 0;
     font-size: 18px;
-    color: blueviolet;
+    color: rgb(142, 42, 235);
 }
 .item p {
     padding: 10px 10px 0;
@@ -694,7 +692,7 @@ h1 {
     padding-bottom: 200px;
     border-bottom: 1px dashed #333;
     background: #485563;
-    background-image: linear-gradient(to right, #29323c, #485563);
+    background-image: linear-gradient(to right, #943aba, #9715ce);
     color: #f1f1f1;
     position: relative;
     z-index: -1;
@@ -956,7 +954,7 @@ h1 {
 .section-parallax {
     width: 100%;
     height: 250px;
-    background: url(ressources/accueil.webp) no-repeat right / cover fixed;
+    background: url(assets/accueil.webp) no-repeat right / cover fixed;
     display: flex;
     justify-content: center;
     align-items: center;
