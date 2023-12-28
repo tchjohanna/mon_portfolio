@@ -381,43 +381,45 @@
     <div id="confirmationMessage" class="input-formulaire"></div>
 </section>
 
-    <script>
-// Fonction pour envoyer le formulaire via AJAX
-function envoyerFormulaire() {
-    // Récupérer les valeurs des champs de formulaire
-    let prenom = document.getElementById("prenom").value;
-    let nom = document.getElementById("nom").value;
-    let message = document.getElementById("txt").value; // Utilisez l'ID correct "txt" pour le champ de message
+<script>
+    // Fonction pour envoyer le formulaire via AJAX
+    function envoyerFormulaire() {
+        // Récupérer les valeurs des champs de formulaire
+        let prenom = document.getElementById("prenom").value;
+        let nom = document.getElementById("nom").value;
+        let message = document.getElementById("txt").value; // Utilisez l'ID correct "txt" pour le champ de message
+    
+        // Créer un objet FormData pour stocker les données du formulaire
+        let formData = new FormData();
+        formData.append("prenom", prenom); // Ajouter le prénom au FormData
+        formData.append("nom", nom); // Ajouter le nom au FormData
+        formData.append("message", message); // Ajouter le message au FormData
+    
+        // Créer une nouvelle requête XMLHttpRequest
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "sendemail.php", true); // Configurer la requête POST vers "sendemail.php"
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Vérifier si la requête est terminée avec succès (état 4) et le statut HTTP est 200 (OK)
+                let confirmationMessage = document.getElementById("confirmationMessage");
+                confirmationMessage.innerHTML = xhr.responseText; // Afficher la réponse de "sendemail.php" dans un élément HTML
+            } else {
+                console.error("erreur lors de l'appel de l'API."); // Gérer les erreurs potentielles de la requête AJAX
+            }
+        };
+    
+        xhr.send(formData); // Envoyer les données du formulaire via la requête AJAX
+    }
+    
+    // Ajouter un gestionnaire d'événement pour le formulaire
+    let formulaire = document.getElementById("contactForm");
+    formulaire.addEventListener("submit", function (e) {
+        e.preventDefault(); // Empêcher le formulaire de se soumettre normalement
+        envoyerFormulaire(); // Appeler la fonction pour envoyer le formulaire via AJAX
+    });
+    </script>
 
-    // Créer un objet FormData pour stocker les données du formulaire
-    let formData = new FormData();
-    formData.append("prenom", prenom); // Ajouter le prénom au FormData
-    formData.append("nom", nom); // Ajouter le nom au FormData
-    formData.append("message", message); // Ajouter le message au FormData
 
-    // Créer une nouvelle requête XMLHttpRequest
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "sendemail.php", true); // Configurer la requête POST vers "sendemail.php"
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            // Vérifier si la requête est terminée avec succès (état 4) et le statut HTTP est 200 (OK)
-            let confirmationMessage = document.getElementById("confirmationMessage");
-            confirmationMessage.innerHTML = xhr.responseText; // Afficher la réponse de "sendemail.php" dans un élément HTML
-        } else {
-            console.error("erreur lors de l'appel de l'API."); // Gérer les erreurs potentielles de la requête AJAX
-        }
-    };
-
-    xhr.send(formData); // Envoyer les données du formulaire via la requête AJAX
-}
-
-// Ajouter un gestionnaire d'événement pour le formulaire
-let formulaire = document.getElementById("contactForm");
-formulaire.addEventListener("submit", function (e) {
-    e.preventDefault(); // Empêcher le formulaire de se soumettre normalement
-    envoyerFormulaire(); // Appeler la fonction pour envoyer le formulaire via AJAX
-});
-</script>
 
     
 <footer>
