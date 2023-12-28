@@ -159,8 +159,8 @@
             <div class="cont-img-port">
                 <img src="assets/kasa.webp" alt="img portfolio">
             </div>
-            <h3>Intégrer React.js à partir d'une Maquette</h3>
-            <p>Recherche et réservation d'appartements entre particuliers.</p>
+            <h3>Refonte complète d'un site web</h3>
+            <p>Recherche et réservation d'appartements entre particuliers avec HTML-CSS-JS-React.</p>
             <a href="https://github.com/tchjohanna/Kasa.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
@@ -169,7 +169,7 @@
                 <img src="assets/nina.webp" alt="img portfolio">
             </div>
             <h3>Optimisez le SEO</h3>
-            <p>Optimiser le SEO pour une visibilité accrue, avec un code efficace et un rapport de résultats.</p>
+            <p>Optimiser le SEO pour une visibilité accrue avec JS-WAVE-LIGHTHOUSE-SEO.</p>
             <a href="https://github.com/tchjohanna/optimisez-le-referencement-d-un-site-de-photographe.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
@@ -177,8 +177,8 @@
             <div class="cont-img-port">
                 <img src="assets/ohmyfood.webp" alt="img portfolio">
             </div>
-            <h3>Conception Mobile First, animations CSS</h3>
-            <p>Création d'un site mobile avec animations CSS, mettant en avant des menus de restaurant interactifs.</p>
+            <h3>Conception Mobile-First pour une Expérience Utilisateur Supérieure</h3>
+            <p>Création d'un site mobile avec HTML-SASS-JS-FIGMA.</p>
             <a href="https://github.com/tchjohanna/ameliorer-interface-site-mobile-animations-css-oh-my-food.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
@@ -187,8 +187,8 @@
             <div class="cont-img-port">
                 <img src="assets/booki.webp" alt="img portfolio">
             </div>
-            <h3>Création d'une Page d'accueil d'une agence de Voyage</h3>
-            <p>Conception à partir d'une maquette figma</p>
+            <h3>De l'UI au Web: Création d'Interfaces Réactives et Accessibles</h3>
+            <p>Conception à partir d'une maquette avec HTML-CSS</p>
             <a href="https://github.com/tchjohanna/cr-ation-de-la-page-d-accueil-d-une-agence-de-voyage.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
@@ -197,8 +197,8 @@
             <div class="cont-img-port">
                 <img src="assets/sophie.webp" alt="img portfolio">
             </div>
-            <h3>Création Portfolio pour Sophie Bluel</h3>
-            <p>Présentation des projets avec filtres, catégories et interface d'administration pour la gestion des projets.</p>
+            <h3>Création Portfolio</h3>
+            <p>Présentation des projets avec HTML-CSS-JS</p>
             <a href="https://github.com/tchjohanna/Creez-une-page-web-dynamique-avec-JavaScript.git" class="btn-projets">Découvrez le projet</a>
         </div>
 
@@ -208,7 +208,7 @@
                 <img src="assets/events.webp" alt="img portfolio">
             </div>
             <h3>Debug et test du site 724events</h3>
-            <p>Correction de la gestion des dates, optimisation du slider, et amélioration des filtres avec tests.</p>
+            <p>Débogage et tests avec REACT-JS-JEST</p>
             <a href="https://github.com/tchjohanna/debuggez-le-site-dune-agence-devenementiel.git" class="btn-projets">Découvrez le projet</a>
         </div>      
 
@@ -304,7 +304,7 @@
                     <p class="titre-section-bloc">CEFTER-PACA</p>
                     <p class="txt-section">Refonte partiel du site avec wordpress, builder ELEMENTOR
                         travaille sur le référencement, l’optimisation du site avec les
-                        outils GOOGLE TREND, SEARCH CONSOLE, SEMRUSH.</p>
+                        outils GOOGLE TREND, SEARCH CONSOLE, SEMRUSH pour un centre équestre de formation.</p>
                 </div>
             </div>
 
@@ -312,7 +312,7 @@
                 <div class="contenu-bloc">
                     <p class="titre-section-bloc">SophroVieProvence</p>
                     <p class="txt-section">CONCEPTION SITE WEB, MAINTENANCE,
-                        Création de site vitrine, builder AVADA</p>
+                        Création d'un site vitrine, builder AVADA  autour de la Sophrologie.</p>
                 </div>
             </div>
 
@@ -320,7 +320,7 @@
                 <div class="contenu-bloc">
                     <p class="titre-section-bloc">BrascotPeinture</p>
                     <p class="txt-section">Concevoir un site web avec wordpress, tenir à jour le blog,
-                        concevoir le logo de l’entreprise. Builder ELEMENTOR</p>
+                        concevoir le logo de l’entreprise pour un artisan peintre.</p>
                 </div>
             </div>
 
@@ -404,6 +404,8 @@ function envoyerFormulaire() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let confirmationMessage = document.getElementById("confirmationMessage");
             confirmationMessage.innerHTML = xhr.responseText;
+        } else{
+            console.error("erreur lors de l'appel de l'api.")
         }
     };
 
