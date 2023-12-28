@@ -194,4 +194,3 @@ const scene5 = new ScrollMagic.Scene({
 })
 .setTween(tlCompetences)
 .addTo(controller);
-
